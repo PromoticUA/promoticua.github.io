@@ -1,0 +1,82 @@
+var gsItemId,gsDstPath,gsDstFile,gbInf;
+function ChmIni(sId,sDstPath,sDstFile)
+{try{
+	gsItemId=sId;
+	gsDstPath=sDstPath;
+	gsDstFile=sDstFile;
+	gbInf=0;
+	document.getElementsByTagName("h1")[0].onclick=function(e){try{e=e||window.event;if(e.shiftKey&&!gbInf)ShowDocInf()}catch(e){}}
+}catch(e){alert("err1")}}
+
+function PmCopyClip(id){window.clipboardData.setData("Text",document.getElementById(id).innerText)}
+function AddCop(sId){return "<td><button title='Copy to clipboard' onclick=\"PmCopyClip('" + sId + "')\">copy</button></td>"}
+function PmScDisp(id,nSc,ev) //nSc:1=Js,2=Vb,3=JsVb
+{
+	ev=ev||window.event;if(ev && ev.shiftKey)nSc=3;
+	var tg;
+	tg=document.getElementById("ScJs"+id);if(tg)tg.style.display=(nSc&1)?"block":"none";
+	tg=document.getElementById("ScVb"+id);if(tg)tg.style.display=(nSc&2)?"block":"none";
+	tg=document.getElementById("ScBtJs"+id);if(tg)tg.className=(nSc&1)?"ScBt1":"ScBt0";
+	tg=document.getElementById("ScBtVb"+id);if(tg)tg.className=(nSc&2)?"ScBt1":"ScBt0";
+	if(window.getSelection)window.getSelection().removeAllRanges();
+	else if(document.selection)document.selection.empty();	//for IE<9(=chm)
+}
+function PmScSel(id)
+{try{
+	var bStd=document.createRange?1:0,	//0=IE<9(=chm)
+		oR=bStd?document.createRange():document.body.createTextRange(),
+		tg=document.getElementById("ScJs"+id);
+	if(!tg||tg.style.display=="none")tg=document.getElementById("ScVb"+id);
+	if(bStd)	{oR.selectNode(tg);var oS=window.getSelection();oS.removeAllRanges();oS.addRange(oR)}
+	else		{oR.moveToElementText(tg);oR.select()}
+	if(window.clipboardData)window.clipboardData.setData("Text",tg.innerText);
+	else document.execCommand('copy');
+}catch(e){}}
+function ShowDocInf()
+{try{
+	gbInf=1;
+	var sFullPath=gsDstPath+gsDstFile,
+		sCs="https://www.promotic.eu/cz/"+sFullPath,
+		sEn="https://www.promotic.eu/en/"+sFullPath,
+		sPl="https://www.promotic.eu/pl/"+sFullPath,
+		oP=document.createElement("p");
+	oP.innerHTML=
+	"Promotic documentation page information:<table>"+
+	"<tr><th>ID:</th><td>"		+gsItemId	+"</td></tr>"+
+	"<tr><th>Path:</th><td>"	+sFullPath	+"</td></tr>"+
+	"<tr><th>WWW&nbsp;cs:</th><td id='WWWcs'><a href='"+sCs+"'>"+sCs+"</a></td>"+AddCop("WWWcs")+"</tr>"+
+	"<tr><th>WWW&nbsp;en:</th><td id='WWWen'><a href='"+sEn+"'>"+sEn+"</a></td>"+AddCop("WWWen")+"</tr>"+
+	"<tr><th>WWW&nbsp;pl:</th><td id='WWWpl'><a href='"+sPl+"'>"+sPl+"</a></td>"+AddCop("WWWpl")+"</tr>"+"</table>";
+	document.body.insertBefore(oP,document.body.childNodes[0]);
+}catch(e){alert("err2")}}
+
+function fSearch()
+{try{
+	var snav="../",txt="",
+		sPath=document.location.pathname,
+		aDot=sPath.split("."),
+		ext=aDot[1].slice(0,3),
+		aPath=sPath.split("/");
+	if(ext=="htm")
+		for(var i=aPath.length-2;i>0;i--)
+			switch(aPath[i])
+			{
+			case "cz": case "en": case "pl": case "de": case "ru": if(i==aPath.length-2) txt="./"; i=0; break;
+			default: txt+=snav;break;
+			}
+	else
+	{
+		for(var i=aPath.length-2;i>0;i--)
+			if(aPath[i]=="DocXml"){i=0;break}
+			else txt+=snav;
+		txt+="Www/"
+	}
+	var sSearch=document.getElementById("ws-search-text").value;
+	document.location.href=txt+"search."+ext+(sSearch?"?"+sSearch:"");
+}catch(e){}}
+
+function ValidateEmail(o)
+{try{
+	var re=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(o.value)
+}catch(e){}}

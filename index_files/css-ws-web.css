@@ -1,0 +1,276 @@
+.cls-clear	{ clear:both; }
+
+html {
+	background: white url("ws-bg2.png") repeat-x bottom center;
+	min-height: 100%;
+}
+
+body {
+	background: url("ws-bg1.png") repeat-x top center;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 11pt;
+	color: black;
+}
+
+#ws-adv {
+	background: url("ws-advert.png") no-repeat top center;
+	width: 100%;
+}
+
+table {	font-size: 10pt;}
+
+/**** Styles for Workspace ************************************/
+
+#ws-head>div, #ws-menu-bg, #ws-content, #ws-tail { /* fit to center */
+	width:	1000px;
+	padding: 0px 15px;
+	margin:	0px auto;
+}
+
+#ws-head { background: url("ws-head.png") no-repeat top center; height: 204px; min-width: 1020px;}
+
+#ws-head h5		{ position: relative; float: left; padding: 0px; margin: 0px;}	/* Head title PROMOTIC */
+#ws-head h5 a	{ display: block; width: 475px; height: 184px; overflow: hidden; }
+#ws-head h5 span { display: block; width: 100%; height: 100%; background: url("ws-pm.png") no-repeat top center; }
+
+#ws-flags {
+	position: relative;
+	display: block;
+	height: 35px;
+	width: 350px;
+	float:right;
+	margin-top: 10px;
+}
+
+#ws-flags a		{ display: block; overflow: hidden; height: 100%; float: right; }
+#ws-flags span	{ display: block; height: 100%; }
+
+#ws-flag-cz		{ background: url("ws-flag-cz.png") no-repeat top center; width: 40px; }
+#ws-flag-de		{ background: url("ws-flag-de.png") no-repeat top center; width: 43px; }
+#ws-flag-en		{ background: url("ws-flag-en.png") no-repeat top center; width: 51px; }
+#ws-flag-pl		{ background: url("ws-flag-pl.png") no-repeat top center; width: 42px; }
+#ws-flag-ru		{ background: url("ws-flag-ru.png") no-repeat top center; width: 40px; }
+
+#ws-flag-curr	{ background: url("ws-aura.png") no-repeat top center;}
+
+#ws-search {
+	position: relative;
+	display: block;
+	width: 250px;
+	float: right;
+	margin: 136px 5px 0px 0px;
+	padding: 0;
+}
+
+#ws-search-text {
+	float: right;
+	width: 158px;
+	height: 16px;
+	border: 0px none white;
+	border-radius: 3px 0px 0px 3px;
+	margin: 0;
+	padding: 1px 4px;
+}
+
+#ws-search-submit {
+	float: right;
+	width: 18px;
+	height: 18px;
+	border: 0 none white;
+	border-radius: 0 3px 3px 0;
+	margin: 0px;
+	padding: 1px 3px;
+	background: white url("ws-search.png") no-repeat center left;
+}
+
+#ws-search-submit:hover { cursor:pointer; cursor:pointer; }
+
+/******************************************/
+
+#ws-menu-bg { background: url("ws-menu.png") no-repeat top center; }
+
+#ws-menu {
+	background: url("ws-menu-std.png") repeat-x top center;
+	padding: 0 0 0 1px;
+	height: 50px;
+}
+
+#ws-menu .ws-menu-item {
+	position: relative;
+	display: block;
+	height: 25px;
+	color: white;
+	font-weight: bold;
+	font-size: 11pt;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 8px 10px 1px;
+	background: url("ws-menu-std.png") repeat-x top center;
+	margin: 0px;
+	border: 0px;
+}
+#ws-menu .ws-menu-item:hover	{ background: url("ws-menu-sel.png") repeat-x top center; }
+
+#ws-menu ul	{ display: block; list-style-type: none; padding: 0; margin: 0; }
+
+#ws-menu ul ul {
+	position: absolute;
+	visibility: hidden;
+	list-style-type: none;
+	background: #99ccff;
+
+	box-shadow:	2px 2px 5px 1px rgba(50, 50, 50, 0.5);
+	border-radius: 0px 0px 5px 5px;
+}
+
+#ws-menu ul li {
+	font-size: 12pt;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	white-space: nowrap;
+}
+
+#ws-menu ul ul a /*subitems*/
+{
+	display: block;
+	text-decoration: none;
+	padding: 5px 20px;
+	border: 0;
+}
+#ws-menu ul ul a:link		{ color: black; background-color: #99ccff; }
+#ws-menu ul ul a:visited	{ color: black; background-color: #99ccff; }
+#ws-menu ul ul a:hover		{ color: black; background-color: #dfdfff; }
+#ws-menu ul li:hover ul		{ visibility: visible; }	/* zpusobi zviditelneni submenu */
+#ws-menu ul ul li:last-child a {border-radius: 0px 0px 5px 5px;}
+
+#ws-menu ul li li {
+	float: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#ws-menu .ws-ext {
+	position: relative;
+	display: block;
+	height: 25px;
+	width: 25px;
+	float: right;
+	overflow: hidden;
+	padding: 0;
+	margin: 3px;
+}
+#ws-ext-wikipedia	{ display: block; width: 100%; height: 100%; background: url("ws-ext-wk.png") no-repeat top center; }
+#ws-ext-linkedin	{ display: block; width: 100%; height: 100%; background: url("ws-ext-in.png") no-repeat top center; }
+#ws-ext-youtube		{ display: block; width: 100%; height: 100%; background: url("ws-ext-yt.png") no-repeat top center; }
+#ws-ext-rss			{ display: block; width: 100%; height: 100%; background: url("ws-ext-rss.png") no-repeat top center; }
+#ws-ext-facebook	{ display: block; width: 100%; height: 100%; background: url("ws-ext-fb.png") no-repeat top center; }
+#ws-ext-twitter		{ display: block; width: 100%; height: 100%; background: url("ws-ext-tw.png") no-repeat top center; }
+#ws-ext-google		{ display: block; width: 100%; height: 100%; background: url("ws-ext-gg.png") no-repeat top center; }
+
+/******************************************/
+
+#ws-content {
+	background: url("ws-content-border.png") repeat-y top center;
+	line-height: 135%;
+}
+
+#ws-top {
+	padding: 1em;	/* musi byt, jinak vznikala mezera nad nim */
+	margin: 0 15px 5px 5px;
+	text-align: justify;
+}
+
+#ws-main {
+	float: left;
+	width: 705px;
+	padding: 3px 0 0 0;
+	min-height: 700px;
+	margin: 10px 0 5px 20px;
+	/* text-align:justify; */
+}
+
+#ws-main img {
+	max-width: 300px;
+}
+
+#ws-main .imgtomaxwidth	{
+	max-width: 635px;
+}
+
+#ws-right {
+	float: right;
+	width: 240px;
+	max-height: 1000px;
+	padding: 3px 0 0 5px;
+	margin: 10px 20px 5px 0;
+	font-size: 10pt;
+	line-height: 120%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#ws-right strong {
+	font-size: 8pt;
+	color: #808080;
+}
+
+/******************************************/
+
+#ws-tail {
+	background: url("ws-tail.png") no-repeat bottom center;
+	height: 65px;
+	padding: -20px;
+	margin-top: 0px;
+}
+
+#ws-tail * {
+	float: left;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 12pt;
+	margin: 15px 25px 0;
+}
+
+#ws-tail a:hover	{ text-decoration:underline; }
+#ws-tail .right		{ float:right; }
+
+/********************************************/
+
+.cls_navig
+{
+	background-color: #dcdcdc;
+	margin: 0 10px 14px 0px;
+	padding: 10px 15px;
+	/*border-radius: 5px;*/
+	box-shadow:	2px 2px 5px 2px rgba(200, 200, 200, 1);
+}
+
+.WWWIndex	{}
+.WWWIndex li	{white-space:nowrap;}
+
+.btnDownload {
+	background-image: url("ws-btn-download.png");
+	width: 90px;
+	height: 25px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 2px 2px 2px 2px;
+	font-weight: bold;
+}
+
+.aDownload { color: #ffffff; text-decoration:none; }
+
+@media print
+{
+	#ws-head	{display: none;}
+	#ws-menu	{display: none;}
+	#ws-tail	{display: none;}
+	#ws-right	{display: none;}
+	#ws-main	{top: 0; width: 100%;}
+}
