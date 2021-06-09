@@ -1,0 +1,556 @@
+/*
+	Theme Name: BusinessMan
+Theme URL: http://wordpressorg.ru/businessman/
+	Description: BusinessMan is a free WordPress theme with featured posts option, post thumbnails and theme admin/options page. Suitable for any niche, especially for business blogs.
+	Author: ThemePix.com
+	Author URI: http://themepix.com/
+	Version: 2.0
+*/
+
+/* LAYOUT */
+
+body {
+    background: none repeat scroll 0 0 #F2F2F2;
+}
+#wrapper {
+    background: url("/web/20190124065429im_/http://promotic.com.ua/wp-content/themes/businessman/images/wrapper.jpg") no-repeat scroll center 43px transparent;
+}
+#wrapper-bg {
+background: url("/web/20190124065429im_/http://promotic.com.ua/wp-content/themes/businessman/images/body.png") repeat-x scroll 0 0 transparent;
+}
+#outer-wrapper {
+    margin-top: 0;
+}
+#contentwrap {
+    background: none repeat scroll 0 0 #EDF5F7;
+    border-left: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 960px;
+}
+a {
+    color: #3366CC;
+    text-decoration: none;
+}
+a:hover {
+    color: #5588AA;
+    text-decoration: underline;
+}
+#header {
+    background: url("/web/20190124065429im_/http://promotic.com.ua/wp-content/themes/businessman/images/header.jpg") no-repeat scroll 0 0 transparent;
+    height: 172px;
+}
+#header h1 {
+    font-family: Arial,Helvetica,Sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+    padding: 20px 0 0;
+}
+#header h1 a, #header h1 a:visited {
+    color: #3D3B37;
+    text-decoration: none;
+}
+#header h2 {
+    color: #8D887E;
+    font-family: Arial,Helvetica,Sans-serif;
+    font-size: 14px;
+}
+.logoimg {
+    margin: 7px 0 0 45px;
+}
+.feedtwitter {
+    margin-top: 10px;
+    text-align: left;
+}
+#pagemenucontainer {
+    float: left;
+    height: 70px;
+    margin-top: 0;
+}
+#pagemenu {
+    float: left;
+    height: 42px;
+}
+#pagemenu, #pagemenu ul {
+    line-height: 1;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#pagemenu {
+}
+#pagemenu ul {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#pagemenu li {
+    border-right: 1px solid #EEF6F9;
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#pagemenu ul li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#pagemenu li a, #pagemenu li a:link {
+    color: #000000;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
+    padding: 16px 20px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+#pagemenu li a:hover, #pagemenu li a:active {
+    background: url("https://web.archive.org/web/20190124065429im_/http://4.bp.blogspot.com/_Ax-O2ayi6kU/TP1KXfkDfmI/AAAAAAAAA2U/dB9viAtOrDI/s1600/tab.png") repeat-x scroll 0 0 transparent;
+    display: block;
+    text-decoration: none;
+}
+#pagemenu li.current_page_item a {
+    background: url("https://web.archive.org/web/20190124065429im_/http://4.bp.blogspot.com/_Ax-O2ayi6kU/TP1KXfkDfmI/AAAAAAAAA2U/dB9viAtOrDI/s1600/tab.png") repeat-x scroll 0 0 transparent;
+    color: #000000;
+}
+#pagemenu li:hover, #pagemenu li.sfhover {
+    position: static;
+}
+#navcontainer {
+    background: url("/web/20190124065429im_/http://promotic.com.ua/wp-content/themes/businessman/images/menu.png") repeat-x scroll 0 0 transparent;
+    border-left: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+    display: block;
+    height: 36px;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding: 0;
+    text-shadow: 0 1px 0 #000000;
+}
+#navcontainer .current-cat a {
+    background: url("/web/20190124065429im_/http://promotic.com.ua/wp-content/themes/businessman/images/selected.jpg") repeat-x scroll 0 0 transparent;
+    color: #000000;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+#content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D6DFE8;
+    padding: 10px;
+}
+pre {
+    overflow: auto;
+    width: 460px;
+}
+.post {
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 15px;
+}
+.post p {
+    margin-bottom: 10px;
+}
+.title {
+    color: #1A1B1B;
+    font-family: Arial,Helvetica,Sans-serif;
+    font-weight: bold;
+    line-height: 22px;
+    margin: 0 0 8px;
+    padding: 15px 0 0;
+}
+.title a {
+    color: #1A1B1B;
+    text-decoration: none;
+}
+.title a:hover {
+    color: #3366CC;
+    text-decoration: none;
+}
+.pagetitle {
+    font-family: Arial,Helvetica,Sans-serif;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.readmorecontent {
+    text-align: right;
+}
+a.readmore {
+    color: #3366CC;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 15px;
+    text-decoration: none;
+}
+a.readmore:hover {
+    color: #5588AA;
+}
+.postdate {
+    color: #626D70;
+    font-family: Arial,Verdana;
+    font-size: 11px;
+    padding: 2px 0;
+}
+.postmeta {
+    font-family: Arial,Verdana;
+    font-size: 11px;
+    padding: 2px 4px;
+}
+.postdate img, .postmeta img {
+    border: medium none;
+    margin: 2px;
+    vertical-align: middle;
+}
+.entry {
+    font-family: Arial,Verdana;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 8px;
+    text-align: justify;
+}
+.navigation {
+    padding: 25px 0;
+}
+blockquote {
+    border-left: 3px solid #BCBBBB;
+    color: #666666;
+    font-style: italic;
+    overflow: hidden;
+    padding-left: 9px;
+}
+.post img {
+    max-width: 680px;
+}
+img.wp-smiley {
+    border: medium none;
+    margin: 0;
+    max-height: 12px;
+    padding: 0;
+}
+.aligncenter, div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignleft {
+    float: left;
+	margin: 0 10px 5px 0;
+}
+.alignright {
+    float: right;
+}
+.wp-caption {
+    -moz-border-radius: 3px 3px 3px 3px;
+    background-color: #F3F3F3;
+    border: 1px solid #DDDDDD;
+    margin: 10px;
+    padding-top: 4px;
+    text-align: center;
+}
+.wp-caption img {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active {
+    background: none repeat scroll 0 0 transparent !important;
+    border: 0 none !important;
+    color: #232323 !important;
+    font-size: 15px !important;
+    padding: 4px 8px !important;
+}
+.wp-pagenavi a:hover {
+    background: none repeat scroll 0 0 #168FB8 !important;
+    border: 0 none !important;
+    color: #FFFFFF !important;
+}
+.wp-pagenavi span.pages {
+    background: none repeat scroll 0 0 transparent !important;
+    border: 0 none !important;
+    color: #232323 !important;
+    font-size: 15px !important;
+    padding: 4px 8px !important;
+}
+.wp-pagenavi span.current {
+    background: none repeat scroll 0 0 #168FB8 !important;
+    border: 0 none !important;
+    color: #FFFFFF !important;
+    font-size: 15px !important;
+    font-weight: bold;
+    padding: 4px 8px !important;
+}
+.wp-pagenavi span.extend {
+    background: none repeat scroll 0 0 transparent !important;
+    border: 0 none !important;
+    color: #232323 !important;
+    font-size: 15px !important;
+    padding: 4px 8px !important;
+}
+.sidebaradbox {
+    background: none repeat scroll 0 0 #B7D6DE;
+    border: 3px solid #FFFFFF;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.ad125 {
+    margin: 10px;
+}
+.sidebar {
+    color: #333333;
+    margin: 0;
+}
+.sidebar-right {
+    float: right;
+    margin: 0 5px 0 0;
+    width: 165px;
+}
+.sidebar-left {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 166px;
+}
+.sidebar-left h2 {
+}
+.sidebar-right h2 {
+}
+.sidebar a {
+    color: #3366CC;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    color: #5588AA;
+    text-decoration: underline;
+}
+#search {
+    -moz-border-radius: 5px 5px 5px 5px;
+-webkit-border-bottom-left-radius:5px;
+-webkit-border-bottom-right-radius:5px;
+-webkit-border-top-left-radius:5px;
+-webkit-border-top-right-radius:5px;
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 2px solid #999999;
+    height: 23px;
+    padding-right: 3px;
+    text-align: right;
+}
+#search input {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #444444;
+}
+#s {
+    background: none repeat scroll 0 0 transparent;
+    margin: 2px 0 0;
+    padding: 3px 4px 4px;
+    width: 140px;
+}
+#topsearch #s {
+    width: 140px;
+}
+#topsearch #search {
+    float: right;
+    margin: -31px 0 0;
+}
+.sidebar h2 {
+    background: url("/web/20190124065429im_/http://promotic.com.ua/wp-content/themes/businessman/images/h2bg.png") repeat-x scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,Sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: -8px -8px 0;
+    padding: 8px;
+    text-shadow: 0 1px 0 #000000;
+    text-transform: uppercase;
+}
+.sidebar ul {
+    list-style-type: none;
+    margin: 0 0 5px;
+    padding: 0;
+}
+.sidebar ul li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D6DFE8;
+    list-style-type: none;
+    margin: 0 0 5px;
+    padding: 8px;
+}
+.sidebar ul ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar ul li ul li, .sidebar ul li li {
+    -moz-border-radius: 0 0 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #D6DFE8;
+    border-style: none none dotted;
+    border-width: medium medium 1px;
+    margin: 0;
+    padding: 4px 0;
+}
+#wp-calendar th {
+    background: none repeat scroll 0 0 transparent;
+    color: #666666;
+    font-style: normal;
+    text-transform: capitalize;
+}
+#wp-calendar caption {
+    background: none repeat scroll 0 0 transparent;
+    color: #333333;
+    margin: 2px 0;
+    padding: 2px 4px;
+    text-transform: uppercase;
+}
+#wp-calendar td {
+    color: #777777;
+    font: 12px 'Lucida Grande','Lucida Sans Unicode',Verdana,sans-serif;
+    letter-spacing: normal;
+    padding: 2px 0;
+    text-align: center;
+}
+#wp-calendar td:hover, #wp-calendar #today {
+    background: none repeat scroll 0 0 #168FB8;
+    color: #FFFFFF;
+}
+#wp-calendar td:hover a, #wp-calendar #today a {
+    color: #FFFFFF;
+}
+#wp-calendar {
+    empty-cells: show;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    width: 95%;
+}
+#footer {
+    background: none repeat scroll 0 0 #333333;
+    border-color: #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+    border-style: solid;
+    border-width: 1px 5px 5px;
+    color: #E8EFF1;
+    font-size: 13px;
+    margin-top: 0;
+    padding: 19px;
+    text-align: center;
+}
+#footer a {
+    color: #E8EFF1;
+}
+#footer a:hover {
+    color: #E8EFF1;
+    text-decoration: none;
+}
+#credits {
+    color: #666666;
+    font-size: 11px;
+    padding: 10px;
+    text-align: center;
+}
+#credits a {
+    color: #666666;
+    text-decoration: none;
+}
+#comments h3 {
+    margin-bottom: 10px;
+}
+#commentform input {
+    margin: 5px 5px 1px 0;
+    padding: 2px;
+    width: 170px;
+}
+#commentform {
+    margin: 5px 10px 0 0;
+}
+#commentform textarea {
+    padding: 2px;
+    width: 100%;
+}
+#respond:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#commentform #submit {
+    float: right;
+    margin: 0 0 5px auto;
+}
+.alt {
+    margin: 0;
+    padding: 10px;
+}
+.commentlist {
+    padding: 0;
+    text-align: justify;
+}
+.commentlist li {
+    list-style: none outside none;
+    margin: 15px 0 10px;
+    padding: 5px 5px 10px 10px;
+}
+.commentlist li ul li {
+    margin-left: 10px;
+    margin-right: -5px;
+}
+.commentlist p {
+    margin: 10px 5px 10px 0;
+}
+.children {
+    padding: 0;
+}
+#commentform p {
+    margin: 5px 0;
+}
+.nocomments {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.commentmetadata {
+    display: block;
+    margin: 0;
+}
+.post_thumbnail {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #DDDDDD;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+}
+.sidebar-top {
+    width: 335px;
+}
+
+/*
+     FILE ARCHIVED ON 06:54:29 Jan 24, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:43:31 Jun 09, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 362.785
+  exclusion.robots: 0.16
+  exclusion.robots.policy: 0.148
+  RedisCDXSource: 0.898
+  esindex: 0.011
+  LoadShardBlock: 338.075 (3)
+  PetaboxLoader3.datanode: 135.119 (5)
+  CDXLines.iter: 20.11 (3)
+  load_resource: 194.872 (2)
+  PetaboxLoader3.resolve: 96.566 (2)
+*/
